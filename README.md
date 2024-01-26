@@ -2,7 +2,7 @@
 KR-MGP-STR 프로젝트
 
 ## 실행 코드
-``` $ CUDA_VISIBLE_DEVICES=2 python3 -m torch.distributed.launch --nproc_per_node=1 --nnodes=1 --master_port 29502 train.py --train_data data/kor_train --valid_data data/kor_eval  --select_data K_ST --batch_ratio 1 --Transformer char-str --TransformerModel=char_str_base_patch4_3_32_128 --imgH 32 --imgW 128 --manualSeed=226 --workers=0 --isrand_aug --scheduler --batch_size=50 --rgb --saved_path ./save --exp_name char_str_kor --valInterval 500 --num_iter 2000000 --lr 1 --character Synthdata_korean_label.pickle ```
+``` $ CUDA_VISIBLE_DEVICES=2 python3 -m torch.distributed.launch --nproc_per_node=1 --nnodes=1 --master_port 29502 train.py --train_data data/kor_train --valid_data data/kor_ICDAR  --select_data K_ST --batch_ratio 1 --Transformer char-str --TransformerModel=char_str_base_patch4_3_32_128 --imgH 32 --imgW 128 --manualSeed=226 --workers=0 --isrand_aug --scheduler --batch_size=50 --rgb --saved_path ./save --exp_name char_str_kor --valInterval 500 --num_iter 2000000 --lr 1 --character Synthdata_korean_label.pickle ```
 
 ## 주요 파일 설명
 - train : 모델 학습 파이썬 파일
